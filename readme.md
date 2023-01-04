@@ -21,3 +21,7 @@ TO-DO: Architect the software. Find tutorials on Javascript and explain why each
 Google Sheets will be used to handle the static data, such as items, enemies, and so on.
 
 TO-DO: Figure out how to structure the github repository.
+
+# Combat Rules
+
+Rules follow Dungeons and Dragons 5th edition very closely. The combat is turn based.

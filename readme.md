@@ -6,7 +6,9 @@ This is the start of something great.
 
 # AI Content Creation:
 
-<img src="https://github.com/mattyjacks/fantasyfightersim/blob/main/examples/00001-1546343001-goblin%20with%20s___.png"  width="200"><img src="https://github.com/mattyjacks/fantasyfightersim/blob/main/examples/00003-1253253067-castle%20backgr___.png"  width="200"><img src="https://github.com/mattyjacks/fantasyfightersim/blob/main/examples/00004-711545305-knight%20wearing___.png"  width="200"><img src="https://github.com/mattyjacks/fantasyfightersim/blob/main/examples/00005-2739792428-elf%20knight%20wi___.png"  width="200">
+<img src="https://github.com/mattyjacks/fantasyfightersim/blob/main/examples/images/00001-1546343001-goblin%20with%20s___.png"  width="200"><img src="https://github.com/mattyjacks/fantasyfightersim/blob/main/examples/images/00003-1253253067-castle%20backgr___.png"  width="200"><img src="https://github.com/mattyjacks/fantasyfightersim/blob/main/examples/images/00007-2478843934-sword-antique.png"  width="200"><img src="https://github.com/mattyjacks/fantasyfightersim/blob/main/examples/images/00006-2420947611-fantasy%20hp%20po___.png"  width="200"><img src="https://github.com/mattyjacks/fantasyfightersim/blob/main/examples/images/00008-2478843932-sword-phallic.png"  width="200"><img src="https://github.com/mattyjacks/fantasyfightersim/blob/main/examples/images/00009-2937418289-sword-ninja-dagger.png"  width="200"><img src="https://github.com/mattyjacks/fantasyfightersim/blob/main/examples/images/00010-808460143-barbarian.png"  width="200">
+
+<img src="https://github.com/mattyjacks/fantasyfightersim/blob/main/examples/images/00004-711545305-knight%20wearing___.png"  width="200"><img src="https://github.com/mattyjacks/fantasyfightersim/blob/main/examples/images/00005-2739792428-elf%20knight%20wi___.png"  width="200">
 
 We will use an AI art tool to create pre-generated content. For character portraits and enemies, items, towns, and more.
 

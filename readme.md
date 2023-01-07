@@ -32,4 +32,4 @@ TO-DO: Figure out how to structure the github repository.
 
 # Combat Rules
 
-Rules follow Dungeons and Dragons 5th edition very closely. The combat is turn based.
+Rules follow Dungeons and Dragons 5th edition very closely. The combat is turn based. CSS animations will be used. There is only a single enemy in each combat.

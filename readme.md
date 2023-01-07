@@ -6,6 +6,8 @@ This is the start of something great.
 
 # AI Content Creation:
 
+<img src="https://github.com/mattyjacks/fantasyfightersim/blob/main/examples/00001-1546343001-goblin%20with%20s___.png"  width="200"><img src="https://github.com/mattyjacks/fantasyfightersim/blob/main/examples/00003-1253253067-castle%20backgr___.png"  width="200"><img src="https://github.com/mattyjacks/fantasyfightersim/blob/main/examples/00004-711545305-knight%20wearing___.png"  width="200"><img src="https://github.com/mattyjacks/fantasyfightersim/blob/main/examples/00005-2739792428-elf%20knight%20wi___.png"  width="200">
+
 We will use an AI art tool to create pre-generated content. For character portraits and enemies, items, towns, and more.
 
 TO-DO: Research ai art gen tools. Find the best one, ideally free that can be run locally, or on Google Colab.

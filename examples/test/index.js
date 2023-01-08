@@ -36,18 +36,25 @@ function attackloop() {
   // Generate a random number between 1 and 10 for the attack damage
   const attackDamage = Math.floor(Math.random() * 10) + 1;
   enemyHealth -= attackDamage;
-  console.log(`Player attacked! Enemy health: ${enemyHealth}`);
+  console.log(`Player attacked! ${attackDamage} damage! Enemy health: ${enemyHealth}`);
 
   if (enemyHealth <= 0) {
     console.log('Enemy defeated!');
   } else {
-    // Generate a random number between 1 and 10 for the enemy's counter attack
+    enemyTurn();
+  }
+};
+
+
+
+function enemyTurn() {
     const counterAttackDamage = Math.floor(Math.random() * 10) + 1;
     playerHealth -= counterAttackDamage;
-    console.log(`Enemy counter attack! Player health: ${playerHealth}`);
+    console.log(`Enemy counter attack! ${counterAttackDamage} damage! Player health: ${playerHealth}`);
 
     if (playerHealth <= 0) {
       console.log('Game over');
     }
-  }
-};
+
+
+}

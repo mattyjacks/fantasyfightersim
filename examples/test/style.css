@@ -1,7 +1,7 @@
 h1 span {background-color: black; color: white;}
 
 
-.maingame {background-image: url("https://github.com/mattyjacks/fantasyfightersim/raw/main/examples/images/00003-1253253067-castle%20backgr___.png");  background-size: cover; height: 500px; min-width: 400px; max-width: 600px;}
+.maingame {background-image: url("https://github.com/mattyjacks/fantasyfightersim/raw/main/examples/images/00003-1253253067-castle%20backgr___.png");  background-size: cover; height: 500px; min-width: 400px; max-width: 1000px;}
 
 
 @keyframes shake {

@@ -12,36 +12,14 @@
     <h1 style="text-align:center;">Welcome to <span>Fantasy Fighter Sim</span>!</h1>
 
     <div class="interface">
-      <div class="maingame" max-width="600">
+      <div class="maingame" max-width="1000">
 <h1>FANTASY FIGHTER SIM</h1>
-<button>Attack</button><br>
-<button>Item</button><br>
+<button id="attack-button" onclick="attackloop()">Attack</button><br>
 <img src="https://github.com/mattyjacks/fantasyfightersim/raw/main/examples/images/00004-711545305-knight%20wearing___.png" alt="knight" height="300px" class="shake";/>
 <img src="https://raw.githubusercontent.com/mattyjacks/fantasyfightersim/main/examples/images/00001-1546343001-goblin%20with%20s___.png" alt="knight" height="300px" class="shake";/>
 
-<button onclick="createElement()">Create Element</button>
-
-<script>
-  function Geeks() {
-      var myDiv = document.getElementById("GFG");
-       
-      // creating button element
-      var button = document.createElement('BUTTON');
-       
-      // creating text to be
-      //displayed on button
-      var text = document.createTextNode("Button");
-       
-      // appending text to button
-      button.appendChild(text);
-       
-      // appending button to div
-      myDiv.appendChild(button); ;
-  }
-</script>
-
 <button id="GFG" onclick = "Geeks()">
-  Press me!
+  Click to add new buttons.
 </button>
 
 

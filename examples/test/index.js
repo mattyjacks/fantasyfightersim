@@ -28,9 +28,6 @@ function rollD20() {
     logbox(`You rolled a ${d20}!`);
 }
 
-
-console.log('Logging is working!');
-
 const attackButton = document.getElementById('attack-button');
 let playerHealth = 100;
 let enemyHealth = 100;
@@ -93,3 +90,12 @@ function updateScroll() {
     logElement.scrollTop = logElement.scrollHeight;
   }
   
+
+
+
+
+
+
+
+  console.log('Logging is working!');
+    // Print a log message to the console

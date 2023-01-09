@@ -41,7 +41,7 @@ h1 span {background-color: black; color: white;}
   }
   
   .shake {
-    animation: shake 2s infinite;
+    animation: shake 5s infinite;
   }
 
   .attacking {

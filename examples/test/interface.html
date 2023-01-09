@@ -13,12 +13,18 @@
     <div class="interface">
       <div class="maingame" max-width="1000">
 <h1>FANTASY FIGHTER SIM</h1>
-<div id="logbox" height="100px" style="overflow-y:scroll; overflow: scroll; background-color: lightskyblue; text-align: center; opacity: 0.7; max-height: 100px;"><h3>Game Log</h3><br></div>
+<div id="logbox" height="100px" style="overflow-y:scroll; background-color: lightskyblue; text-align: center; opacity: 0.7; max-height: 100px;"><h3>Game Log</h3><br></div>
 <!--- <button id="logtestbutton" onclick="logtest()">Log Test</button> --->
 <button id="attack-button" onclick="attackloop()">Attack</button><br>
-<button id="rolld20button" onclick="rollD20()">Roll 1d20</button><br>
-<div id="player1" class="player"><img src="https://github.com/mattyjacks/fantasyfightersim/raw/main/examples/images/00004-711545305-knight%20wearing___.png" alt="knight" height="300px" class="shake";/> </div>
-<img src="https://raw.githubusercontent.com/mattyjacks/fantasyfightersim/main/examples/images/00001-1546343001-goblin%20with%20s___.png" class="enemy shake" alt="knight" height="300px" class="shake";/>
+<button id="rolld20button" onclick="rollD20free()">Roll a D20</button><br>
+
+<table width="100%">
+  <tr>
+    <td><div id="player1" class="player"><img src="https://github.com/mattyjacks/fantasyfightersim/raw/main/examples/images/00004-711545305-knight%20wearing___.png" alt="knight" height="300px" class="shake";/> </div></td>
+    <td><div id="enemy1" class="enemy shake" style="float:right;"><img src="https://raw.githubusercontent.com/mattyjacks/fantasyfightersim/main/examples/images/00001-1546343001-goblin%20with%20s___.png" alt="goblin" height="200px";/></div>
+    </td>
+  </tr>
+</table>
 
 <button id="GFG" onclick = "Geeks()">
   Click to add new buttons.

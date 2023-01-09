@@ -21,8 +21,8 @@ function Geeks() {
 }
 
 
-
-function rollD20() {
+//rolls a d20 and logs the result to the logbox, controlled by button
+function rollD20free() {
     let d20 = Math.floor(Math.random() * 20) + 1;
     console.log(d20);
     logbox(`You rolled a ${d20}!`);

@@ -27,6 +27,8 @@ function rollD20free() {
     console.log(d20);
     logbox(`You rolled a ${d20}!`);
 }
+ //rolls a d20 and does not log the result to the logbox
+function rD20() {let d20 = Math.floor(Math.random() * 20) + 1; console.log(d20);}
 
 const attackButton = document.getElementById('attack-button');
 let playerHealth = 100;
@@ -34,7 +36,8 @@ let enemyHealth = 100;
 
 function attackloop() {
   // Generate a random number between 1 and 10 for the attack damage
-  const attackDamage = Math.floor(Math.random() * 10) + 1;
+  const attackDamage = Math.floor(Math.random() * 10) + 1; 
+  audioSwoosh();
   enemyHealth -= attackDamage;
   attackAnimPlayer();
  //console.log(`Player attacked! ${attackDamage} damage! Enemy health: ${enemyHealth}`);
@@ -91,7 +94,26 @@ function updateScroll() {
   }
   
 
-
+//This handles audio
+const audioFileSwoosh = [
+    'https://example.com/audio/file1.mp3',
+    'https://example.com/audio/file2.mp3',
+    'https://example.com/audio/file3.mp3'
+  ];
+  
+  function audioSwoosh() {
+    // Choose a random audio file
+    const audioFile = audioFileSwoosh[Math.floor(Math.random() * audioFileSwoosh.length)];
+  
+    // Create an audio object
+    const audio = new Audio(audioFile);
+  
+    // Play the audio
+    audio.play();
+  }
+  
+  // Play a random audio file
+  audioSwoosh();
 
 
 

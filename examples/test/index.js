@@ -1,14 +1,6 @@
 // Nothing here yet
 let player1 = document.getElementById("player1");
 
-function init() {
-    let player1 = document.getElementById('player1');
-    console.log('log init is '+ player1);
-}
-
-window.onload = init();
-
-
 function Geeks() {
     var myDiv = document.getElementById("GFG");
      
@@ -33,7 +25,7 @@ function Geeks() {
 
 
 
-console.log('log35 is '+ player1);
+console.log('Logging is working!');
 
 const attackButton = document.getElementById('attack-button');
 let playerHealth = 100;
@@ -43,9 +35,9 @@ function attackloop() {
   // Generate a random number between 1 and 10 for the attack damage
   const attackDamage = Math.floor(Math.random() * 10) + 1;
   enemyHealth -= attackDamage;
-  attackAnim();
-  console.log(`Player attacked! ${attackDamage} damage! Enemy health: ${enemyHealth}`);
-
+  attackAnimPlayer();
+ //console.log(`Player attacked! ${attackDamage} damage! Enemy health: ${enemyHealth}`);
+logbox(`Player attacked! ${attackDamage} damage! Enemy health: ${enemyHealth}`);
   if (enemyHealth <= 0) {
     console.log('Enemy defeated!');
   } else {
@@ -58,7 +50,8 @@ function attackloop() {
 function enemyTurn() {
     const counterAttackDamage = Math.floor(Math.random() * 10) + 1;
     playerHealth -= counterAttackDamage;
-    console.log(`Enemy counter attack! ${counterAttackDamage} damage! Player health: ${playerHealth}`);
+   // console.log(`Enemy counter attack! ${counterAttackDamage} damage! Player health: ${playerHealth}`);
+logbox(`Enemy counter attack! ${counterAttackDamage} damage! Player health: ${playerHealth}`);
 
     if (playerHealth <= 0) {
       console.log('Game over');
@@ -67,11 +60,32 @@ function enemyTurn() {
 
 }
 
-function attackAnim() {
+function attackAnimPlayer() {
   player1.classList.add('attacking');
 
   // Wait for the attack animation to finish before removing the 'attacking' class
   setTimeout(function() {
     player1.classList.remove('attacking');
-  }, 500);
+  }, 1000);
 }
+
+
+//below controls logging to the logbox
+const logElement = document.getElementById('logbox');
+
+// Print a log message to the console
+console.log('Hello, world!');
+
+// Append the log message to the log element
+function logtest() {
+    logElement.innerHTML += 'Hello, world!<br>';
+}
+function logbox(logString) {
+    logElement.innerHTML += logString + '<br>';
+    updateScroll();
+}
+function updateScroll() {
+    // Set the scrollTop to the scrollHeight to scroll to the bottom
+    logElement.scrollTop = logElement.scrollHeight;
+  }
+  

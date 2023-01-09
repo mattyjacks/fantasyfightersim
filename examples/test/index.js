@@ -22,7 +22,11 @@ function Geeks() {
 
 
 
-
+function rollD20() {
+    let d20 = Math.floor(Math.random() * 20) + 1;
+    console.log(d20);
+    logbox(`You rolled a ${d20}!`);
+}
 
 
 console.log('Logging is working!');
@@ -51,7 +55,7 @@ function enemyTurn() {
     const counterAttackDamage = Math.floor(Math.random() * 10) + 1;
     playerHealth -= counterAttackDamage;
    // console.log(`Enemy counter attack! ${counterAttackDamage} damage! Player health: ${playerHealth}`);
-logbox(`Enemy counter attack! ${counterAttackDamage} damage! Player health: ${playerHealth}`);
+logbox(`Enemy counter attacked! ${counterAttackDamage} damage! Player health: ${playerHealth}`);
 
     if (playerHealth <= 0) {
       console.log('Game over');

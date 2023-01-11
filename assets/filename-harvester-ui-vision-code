@@ -1,0 +1,72 @@
+{
+  "Name": "fantasy-fighter-sim-audio-harvester",
+  "CreationDate": "2023-1-9",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "https://github.com/mattyjacks/fantasyfightersim/tree/main/assets/sounds/swooshes",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "storeText // xpath=//*[@id=\"repo-content-pjax-container\"]/div/div/div[3]/div[3]/div/div[3]/div[2]/span",
+      "Value": "temptextstore",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "3",
+      "Value": "divnum",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "!REPLAYSPEED",
+      "Value": "FAST",
+      "Description": ""
+    },
+    {
+      "Command": "store",
+      "Target": "",
+      "Value": "textsum",
+      "Description": ""
+    },
+    {
+      "Command": "label",
+      "Target": "startHarvesting",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=//*[@id=\"repo-content-pjax-container\"]/div/div/div[3]/div[3]/div/div[${divnum}]/div[2]/span",
+      "Value": "temptextstore",
+      "Description": ""
+    },
+    {
+      "Command": "",
+      "Target": "",
+      "Value": "",
+      "Description": ""
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "return ${textsum}+${temptextstore}+\",\"",
+      "Value": "textsum",
+      "Description": ""
+    },
+    {
+      "Command": "executeScript_Sandbox",
+      "Target": "return Number(${divnum}) +1",
+      "Value": "divnum",
+      "Description": "increment divnum"
+    },
+    {
+      "Command": "gotoLabel",
+      "Target": "startHarvesting",
+      "Value": "",
+      "Description": ""
+    }
+  ]
+}

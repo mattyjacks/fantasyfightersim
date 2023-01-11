@@ -1,8 +1,15 @@
 h1 span {background-color: black; color: white;}
 
+body {background: linear-gradient(to bottom, rgba(242,246,248,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 51%, rgba(224,239,249,1) 100%);}
 
-.maingame {background-image: url("https://github.com/mattyjacks/fantasyfightersim/raw/main/examples/images/00003-1253253067-castle%20backgr___.png");  background-size: cover; height: 500px; min-width: 400px; max-width: 1000px;}
 
+.maingame {background-image: url("https://github.com/mattyjacks/fantasyfightersim/raw/main/examples/images/00003-1253253067-castle%20backgr___.png");
+    background-size: cover; height: 700px; min-width: 400px; max-width: 1000px; border:solid lightblue 3px;}
+
+
+.credits {background:azure; float: right; border: lightblue dashed 5px; padding:10px;}
+
+.pressedbutton {color:white; background-color: grey;}
 
 @keyframes shake {
     0% {
@@ -53,7 +60,55 @@ h1 span {background-color: black; color: white;}
     50% {transform: translate(350px, 0px) rotate(20deg);}
     100% {transform: translate(0px, 0px) rotate(0deg);}
   }
+  .enemyattacking {
+    animation: animAttackLeft 1s !important; transition:.5s;
+  }
+
+  @keyframes animAttackLeft {
+    0% {transform: translate(0px, 0px) rotate(0deg);}
+    50% {transform: translate(-350px, 0px) rotate(-20deg);}
+    100% {transform: translate(0px, 0px) rotate(0deg);}
+  }
 
 .player {transition: 0.5s;}
 
   .enemy {animation: shake 3s infinite;}
+
+
+  @keyframes rainbow {
+    0% {
+      color: red;
+    }
+    20% {
+      color: orange;
+    }
+    40% {
+      color: yellow;
+    }
+    60% {
+      color: green;
+    }
+    80% {
+      color: blue;
+    }
+    100% {
+      color: red;
+    }
+  }
+  
+  .rainbowtext {
+    animation: rainbow 5s linear infinite;
+text-shadow: 0 1px 0 #ccc, 
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+               font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }

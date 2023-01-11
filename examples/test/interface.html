@@ -7,28 +7,36 @@
     <title>Fantasy Fighter Sim</title>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
+  <body class="body" id="body">
     <h1 style="text-align:center;">Welcome to <span>Fantasy Fighter Sim</span>!</h1>
 
     <div class="interface">
-      <div class="maingame" max-width="1000">
-<h1>FANTASY FIGHTER SIM</h1>
-<div id="logbox" height="100px" style="overflow-y:scroll; background-color: lightskyblue; text-align: center; opacity: 0.7; max-height: 100px;"><h3>Game Log</h3><br></div>
+      <div class="maingame" max-width="1000px">
+<h1 class="rainbowtext" style="text-align:center;">FANTASY FIGHTER SIM</h1>
+<table width="100%">
+  <tr>
+<td>
+  <button id="attack-button" onclick="attackloop()">Attack</button><br>
+  <button id="rolld20button" onclick="rollD20free()">Roll a D20</button><br><br>
+</td>
+<td><div id="logbox" height="100px" style="overflow-y:scroll; background-color: lightskyblue; text-align: center; opacity: 0.7; max-height: 100px; box-shadow: inset 0px 5px 25px 7px rgba(0,0,0,0.75); max-width: 700px;"><h1>Game Log:</h1><br><h1>Welcome to the game!</h1></div></td>
+</tr>
 <!--- <button id="logtestbutton" onclick="logtest()">Log Test</button> --->
-<button id="attack-button" onclick="attackloop()">Attack</button><br>
-<button id="rolld20button" onclick="rollD20free()">Roll a D20</button><br>
 
 <table width="100%">
   <tr>
     <td><div id="player1" class="player"><img src="https://github.com/mattyjacks/fantasyfightersim/raw/main/examples/images/00004-711545305-knight%20wearing___.png" alt="knight" height="300px" class="shake";/> </div></td>
-    <td><div id="enemy1" class="enemy shake" style="float:right;"><img src="https://raw.githubusercontent.com/mattyjacks/fantasyfightersim/main/examples/images/00001-1546343001-goblin%20with%20s___.png" alt="goblin" height="200px";/></div>
+    <td><div id="enemy1" class="enemy" style="float:right;"><img src="https://raw.githubusercontent.com/mattyjacks/fantasyfightersim/main/examples/images/00001-1546343001-goblin%20with%20s___.png" alt="goblin" height="200px";/></div>
     </td>
   </tr>
 </table>
 
-<button id="GFG" onclick = "Geeks()">
+<button id="testsoundbutton" onclick="audioTest()">Test Sound</button><br>
+<button id="soundmuteFXbutton" onclick="audioMuteFX()">Mute Sound Effects</button><br>
+<!--- <button id="soundmutemusicbutton" onclick="audioMuteMusic()">Mute Music</button><br> -->
+<!--- <button id="GFG" onclick = "Geeks()">
   Click to add new buttons.
-</button>
+</button> --->
 
 
 
@@ -39,9 +47,28 @@
 
 
     </div>
-    <div><p>Created by Matty Jacks</p>
+    <div class="credits" width="400">
+      <p>View Code on <a href="https://github.com/mattyjacks/fantasyfightersim">Github</a></p>
+      <p>Created by Matty Jacks</p>
 <p>Sounds from <a href="https://www.zapsplat.com/">ZapSplat.com</a></p>
     </p></div>
+    <!-- ... existing HTML ... -->
+
+    <p>
+      These are testing scraps related to react.
+      <!-- We will put our React component inside this div. -->
+      <div class="like_button_container" data-commentid="1"></div>
+    </p>
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Load our React component. -->
+    <script src="like_button.js"></script>
+<!-- ... existing HTML ... -->
   </body>
   <script src="index.js"></script>
+   <!-- ... other HTML ... -->
+
 </html>

@@ -54,7 +54,7 @@ function attackloop() {
  //console.log(`Player attacked! ${attackDamage} damage! Enemy health: ${enemyHealth}`);
 logbox(`Player attacked! ${attackDamage} damage! Enemy health: ${enemyHealth}`);
   if (enemyHealth <= 0) {
-    console.log('Enemy defeated!');
+    console.log('Enemy defeated!'); logbox("Enemy is now dead. Congrats!"); enemy1.classList.add('enemydead');
   } else {
     setTimeout(() => {  enemyTurn(); }, 700);
   }

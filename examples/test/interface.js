@@ -74,13 +74,14 @@ function Geeks() {
 
 //rolls a d20 and logs the result to the logbox, controlled by button
 function rollD20free() {
-  audioDiceRoll();
+  
     let d20 = Math.floor(Math.random() * 20) + 1;
-    console.log(d20);
+    console.log('Rolled ' + d20);
     logbox(`You rolled a ${d20}!`);
+    audioDiceRoll();
 }
  //rolls a d20 and does not log the result to the logbox
-function rD20() {let d20 = Math.floor(Math.random() * 20) + 1; console.log(d20);}
+// function rD20() {let d20 = Math.floor(Math.random() * 20) + 1; console.log(d20);}
 
 let playerHealth = 100;
 let enemyHealth = 100;
@@ -161,9 +162,9 @@ const audioFileSwoosh = [
 
 
   function audioDiceRoll() { if(audioMuteFXbool===false) {
-    const audio2 = new Audio(audioFileDiceRoll);
-    
-    audio2.play();} }
+    const audio = new Audio(audioFileDiceRoll);
+    console.log('audioDiceRoll() called');
+    audio.play();} }
 
   function audioSwoosh() { if(audioMuteFXbool===false) {
     // Choose a random audio file

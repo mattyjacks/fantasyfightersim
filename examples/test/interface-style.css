@@ -64,7 +64,7 @@ body {background: linear-gradient(to bottom, rgba(242,246,248,1) 0%, rgba(216,22
 
 @keyframes animAttackRight {
     0% {transform: translate(0px, 0px) rotate(0deg);}
-    50% {transform: translate(350px, 0px) rotate(20deg);}
+    50% {transform: translate(150px, 0px) rotate(20deg);}
     100% {transform: translate(0px, 0px) rotate(0deg);}
   }
   .enemyattacking {
@@ -73,7 +73,7 @@ body {background: linear-gradient(to bottom, rgba(242,246,248,1) 0%, rgba(216,22
 
   @keyframes animAttackLeft {
     0% {transform: translate(0px, 0px) rotate(0deg);}
-    50% {transform: translate(-350px, 0px) rotate(-20deg);}
+    50% {transform: translate(-150px, 0px) rotate(-20deg);}
     100% {transform: translate(0px, 0px) rotate(0deg);}
   }
 

@@ -1,4 +1,4 @@
-.player img {margin:auto; display: block;}
+.player img {margin:auto !important; display: block !important;}
 .enemy img {margin:auto; display: block;}
 
 

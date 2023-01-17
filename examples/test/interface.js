@@ -6,6 +6,47 @@ let player1 = document.getElementById("player1");
 let enemy1 = document.getElementById("enemy1");
 const attackButton = document.getElementById('attack-button');
 
+
+function myForm() {
+  var inputValue = '';
+  var inputEl = document.createElement('input');
+  inputEl.type = 'text';
+  inputEl.value = inputValue;
+  var divEl = document.createElement('div');
+  divEl.innerHTML = 'Hello, ' + inputValue;
+
+  inputEl.addEventListener('input', function(e) {
+    inputValue = e.target.value;
+    divEl.innerHTML = 'Hello, ' + inputValue;
+  });
+  document.body.appendChild(inputEl);
+  document.body.appendChild(divEl);
+}
+
+
+
+
+/* this is from chatgpt
+import React, { useState } from 'react';
+
+function playerNameForm() {
+const [playerNameInputValue, setPlayerNameInputValue] = useState('');
+function handlePlayerNameInputChange(event) {
+    setPlayerNameInputValue(event.target.value);
+}
+    return (
+      <form>
+        <label>
+          Name Character:
+          <input type="text" value={playerNameInputValue} onChange={handlePlayerNameInputChange} />
+        </label>
+        <br />
+        <br />
+        <div>Hello, {inputValue}</div>
+      </form>
+    );
+  } */
+
 // Nothing here yet
 
 //declares variables like player1

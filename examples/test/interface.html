@@ -12,20 +12,21 @@
     <div class="interface">
       <div class="maingame" max-width="1000px">
 <h1 class="rainbowtext" style="text-align:center;">FANTASY FIGHTER SIM!</h1>
+<div id="logbox" height="100px" style="overflow-y:scroll; background-color: lightskyblue; text-align: center; opacity: 0.7; max-height: 100px; box-shadow: inset 0px 5px 25px 7px rgba(0,0,0,0.75); max-width: 700px; margin:auto;"><h1>Game Log:</h1><br><h1>Welcome to the game!</h1></div>
 <table width="100%">
   <tr>
 <td>
-  <button id="attack-button" onclick="attackloop()" style="background:red; font-size:large;">Attack ⚔️</button><br>
-  <button id="rolld20button" onclick="rollD20free()">Roll a D20 🎲</button><br><br>
+  <button id="attack-button" onclick="attackloop()" style="background:red; font-size:large; margin: 10px;">Attack ⚔️</button><button id="rolld20button" onclick="rollD20free()">Roll a D20 🎲</button><br>
+  <br><br>
 </td>
-<td><div id="logbox" height="100px" style="overflow-y:scroll; background-color: lightskyblue; text-align: center; opacity: 0.7; max-height: 100px; box-shadow: inset 0px 5px 25px 7px rgba(0,0,0,0.75); max-width: 700px;"><h1>Game Log:</h1><br><h1>Welcome to the game!</h1></div></td>
+<td></td>
 </tr>
 <!--- <button id="logtestbutton" onclick="logtest()">Log Test</button> --->
 
 <table width="100%">
   <tr>
-    <td><div id="player1" class="player"><img src="https://github.com/mattyjacks/fantasyfightersim/raw/main/examples/images/00004-711545305-knight%20wearing___.png" alt="knight" height="300px" class="shake";/> </div></td>
-    <td><div id="enemy1" class="enemy" style="float:right;"><img src="https://raw.githubusercontent.com/mattyjacks/fantasyfightersim/main/examples/images/00001-1546343001-goblin%20with%20s___.png" alt="goblin" height="200px";/></div>
+    <td><div id="player1" class="player shake"><p style="text-align:center; color:blue;">Player</p><img src="https://github.com/mattyjacks/fantasyfightersim/raw/main/examples/images/00004-711545305-knight%20wearing___.png" alt="knight" height="300px";/> </div></td>
+    <td><div id="enemy1" class="enemy" style="float:right;"><p style="text-align: center; color: red;">Goblin</p><img src="https://raw.githubusercontent.com/mattyjacks/fantasyfightersim/main/examples/images/00001-1546343001-goblin%20with%20s___.png" alt="goblin" height="200px";/></div>
     </td>
   </tr>
 </table>
@@ -36,6 +37,7 @@
 <!--- <button id="GFG" onclick = "Geeks()">
   Click to add new buttons.
 </button> --->
+<button id="playerNameFormButton" onclick="myForm()">Change Player Name</button>
 
 
 

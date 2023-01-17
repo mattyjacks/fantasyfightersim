@@ -8,6 +8,46 @@ const attackButton = document.getElementById('attack-button');
 const audioFileDiceRoll = 'https://github.com/mattyjacks/fantasyfightersim/blob/main/assets/sounds/zapsplat_leisure_board_game_yahtzee_dice_x1_put_in_shaker.mp3?raw=true';
 
 
+var interfaceScreenCombat = document.getElementsByClassName("screen-combat");
+var interfaceScreenTown = document.getElementsByClassName("screen-town");
+
+
+function interfaceScreenStartGame() {
+  logbox ('Welcome to Fantasy Fighter Simulator! Please enter your character name (to be added) to begin.');
+  interfaceScreenTownShow();
+}
+
+function interfaceScreenCombatShow() {
+    interfaceScreenCombat[0].style.display = "block";
+    //interfaceScreenCombat[0].style.visibility = "visible";
+    console.log('Combat screen shown');
+    logbox('Combat Entered! Fight for your life!');
+    interfaceScreenTownHide();
+}
+
+function interfaceScreenTownShow() {
+    interfaceScreenTown[0].style.display = "block";
+    //interfaceScreenTown[0].style.visibility = "visible";
+    console.log('Town screen shown');
+    logbox('Town Entered! You are safe here.');
+    interfaceScreenCombatHide();
+}
+
+function interfaceScreenCombatHide() {
+interfaceScreenCombat[0].style.display = "none";
+console.log('Combat screen hidden');
+}
+
+function interfaceScreenTownHide() {
+interfaceScreenTown[0].style.display = "none";
+console.log('Town screen hidden');
+}
+
+function runAway() {
+  logbox('You ran away!');
+  interfaceScreenTownShow();
+}
+
 function myForm() {
   var inputValue = '';
   var inputEl = document.createElement('input');

@@ -13,14 +13,34 @@
       <div class="maingame" max-width="1000px">
 <div id="logbox" height="100px" style="overflow-y:scroll; background-color: lightskyblue; text-align: center; opacity: 0.7; max-height: 100px; box-shadow: inset 0px 5px 25px 7px rgba(0,0,0,0.75); max-width: 700px; margin:auto;"><h1 class="rainbowtext" style="text-align:center;">FANTASY FIGHTER SIM!</h1><h1>Game Log:</h1><br><h1>Welcome to the game!</h1></div>
 
+<!--- This is the start screen. --->
+
+<button id="startbutton" onclick="interfaceScreenStartGame()">Start Game</button><br>
+<!--- This is the town screen -->
+
+<div class="screen-town" style="display:none;">
+
+<h2>Town of Venture</h2>
+
+
+<button id="enterCombatButton" onclick="interfaceScreenCombatShow()">Fight Something</button>
+
+<p>Market Button goes here</p>
+<p>Tavern Button goes here</p>
+<p>Temple Button goes here</p>
+
+
+
+</div class="screen-town">
 
 <!--- This is the combat screen.-->
-<div class="screen-combat">
+<div class="screen-combat" style="display: none;">
 
 <table width="100%">
   <tr>
 <td>
   <button id="attack-button" onclick="attackloop()" style="background:red; font-size:large; margin: 10px;">Attack ⚔️</button><button id="rolld20button" onclick="rollD20free()">Roll a D20 🎲</button><br>
+  <button id="run-away-button" onclick="runAway()" style="background:yellow; font-size:large; margin: 10px;">Run Away 🏃‍♂️</button>
   <br><br>
 </td>
 <td></td>
@@ -43,6 +63,7 @@
   Click to add new buttons.
 </button> --->
 <button id="playerNameFormButton" onclick="myForm()">Change Player Name</button>
+<button id="enterCombatButton" onclick="interfaceScreenCombatShow()">Enter Combat</button>
 
 
 
@@ -71,7 +92,7 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 
     <!-- Load our React component. -->
-    <script src="like_button.js"></script>
+    <!-- <script src="like_button.js"></script> -->
 <!-- ... existing HTML ... -->
   </body>
   <script src="interface.js"></script>

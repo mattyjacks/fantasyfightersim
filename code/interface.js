@@ -1,3 +1,10 @@
+let playerMaxHealth = 100;
+let enemyMaxHealth = 50;
+let playerHealth = playerMaxHealth;
+let enemyHealth = enemyMaxHealth;
+let startingGold = 15;
+let playerGold = startingGold;
+
 let audioMuteFXbool = false;
 let audioMuteMusicbool = false;
 const soundMuteFXbutton = document.getElementById("soundmuteFXbutton");
@@ -113,6 +120,22 @@ function Geeks() {
 }
 
 
+// this controls resting
+
+function rest() {
+
+  if (playerGold >= 10) {
+    playerGold -= 10;
+  playerHealth = playerMaxHealth;
+  enemyHealth = enemyMaxHealth;
+  logbox('You rested and healed to full health! Remaining gold: ' + playerGold);
+  enemy1.classList.remove('enemyattacking');
+  enemy1.classList.remove('enemydead');
+  console.log('Resting'); } else {
+  logbox('You do not have enough gold to rest!');
+  }
+}
+
 //rolls a d20 and logs the result to the logbox, controlled by button
 function rollD20free() {
   
@@ -123,9 +146,6 @@ function rollD20free() {
 }
  //rolls a d20 and does not log the result to the logbox
 // function rD20() {let d20 = Math.floor(Math.random() * 20) + 1; console.log(d20);}
-
-let playerHealth = 100;
-let enemyHealth = 100;
 
 function attackloop() {
     if (enemyHealth <= 0) {
@@ -207,7 +227,7 @@ const audioFileSwoosh = [
     console.log('audioDiceRoll() called');
     audio.play();} }
 
-    funtion audioRunAway() { if(audioMuteFXbool===false) {
+    function audioRunAway() { if(audioMuteFXbool===false) {
 
     const audio = new Audio(audioFileRunAway);
     console.log('audioRunAway() called');

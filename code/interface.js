@@ -6,7 +6,7 @@ let player1 = document.getElementById("player1");
 let enemy1 = document.getElementById("enemy1");
 const attackButton = document.getElementById('attack-button');
 const audioFileDiceRoll = 'https://github.com/mattyjacks/fantasyfightersim/blob/main/assets/sounds/zapsplat_leisure_board_game_yahtzee_dice_x1_put_in_shaker.mp3?raw=true';
-
+const audioFileRunAway = 'https://github.com/mattyjacks/fantasyfightersim/blob/main/assets/sounds/zapsplat_running_animals_cat_run_carpet_002_56479.mp3?raw=true';
 
 var interfaceScreenCombat = document.getElementsByClassName("screen-combat");
 var interfaceScreenTown = document.getElementsByClassName("screen-town");
@@ -46,6 +46,7 @@ console.log('Town screen hidden');
 function runAway() {
   logbox('You ran away!');
   interfaceScreenTownShow();
+  audioRunAway();
 }
 
 function myForm() {
@@ -205,6 +206,13 @@ const audioFileSwoosh = [
     const audio = new Audio(audioFileDiceRoll);
     console.log('audioDiceRoll() called');
     audio.play();} }
+
+    funtion audioRunAway() { if(audioMuteFXbool===false) {
+
+    const audio = new Audio(audioFileRunAway);
+    console.log('audioRunAway() called');
+    audio.play();}
+    }
 
   function audioSwoosh() { if(audioMuteFXbool===false) {
     // Choose a random audio file

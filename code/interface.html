@@ -15,7 +15,7 @@
 
 <!--- This is the start screen. --->
 
-<button id="startbutton" onclick="interfaceScreenStartGame()">Start Game</button><br>
+<button id="startbutton" style="background-color:rgb(103, 255, 103); font-size:30px;" onclick="interfaceScreenStartGame()">Start Game</button><br>
 <!--- This is the town screen -->
 
 <div class="screen-town" style="display:none;">
@@ -51,9 +51,11 @@
 
 <table width="100%">
   <tr>
-    <td><div id="player1" class="player shake"><p style="text-align:center; color:blue;">Player</p>
+    <td><div id="player1" class="player shake"><p style="text-align:center; color:blue;"><span style="background-color: rgb(0, 225, 255);">Player</span></p>
+      <div style="text-align:center; color:blue;" id="combatPlayerHealth"></div>
       <img src="https://github.com/mattyjacks/fantasyfightersim/raw/main/examples/images/00004-711545305-knight%20wearing___.png" alt="knight" height="300px";/> </div></td>
-    <td><div id="enemy1" class="enemy" style=""><p style="text-align: center; color: red;">Goblin</p>
+    <td><div id="enemy1" class="enemy" style=""><p style="text-align: center; color: red;"><span style="background-color: pink;">Goblin</span></p>
+      <div style="text-align:center; color:red;" id="combatEnemyHealth"></div>
       <img src="https://raw.githubusercontent.com/mattyjacks/fantasyfightersim/main/examples/images/00001-1546343001-goblin%20with%20s___.png" alt="goblin" height="200px";/></div>
     </td>
   </tr>

@@ -21,6 +21,9 @@ const audioFileRunAway = 'https://github.com/mattyjacks/fantasyfightersim/blob/m
 var interfaceScreenCombat = document.getElementsByClassName("screen-combat");
 var interfaceScreenTown = document.getElementsByClassName("screen-town");
 
+var combatPlayerHealth = document.getElementById("combatPlayerHealth");
+var combatEnemyHealth = document.getElementById("combatEnemyHealth");
+
 
 function interfaceScreenStartGame() {
   logbox ('Welcome to Fantasy Fighter Sim! It is day ' + day + ' of your adventure! You have ' + playerGold + ' gold. You have ' + playerHealth + ' health.');
@@ -37,7 +40,19 @@ function interfaceScreenCombatShow() {
     console.log('Combat screen shown');
     logbox('Combat Entered! Fight for your life!');
     interfaceScreenTownHide();
+    combatEnemyHealthUpdate();
+    combatPlayerHealthUpdate();
+    startCombat();
 }
+
+function startCombat() {
+combatEnemyHealthUpdate();
+combatPlayerHealthUpdate();
+
+if (enemyHealth <= 0) {  // does not work yet
+  enemyHealth = enemyMaxHealth;
+  logbox('You have found a new enemy!')
+} }
 
 function interfaceScreenTownShow() {
     interfaceScreenTown[0].style.display = "block";
@@ -165,6 +180,13 @@ function rollD20free() {
  //rolls a d20 and does not log the result to the logbox
 // function rD20() {let d20 = Math.floor(Math.random() * 20) + 1; console.log(d20);}
 
+
+
+function combatPlayerHealthUpdate() { combatPlayerHealth.innerHTML = "<span style='background-color: rgb(0, 225, 255);'>"+ playerHealth + " Health </span>"; }
+function combatEnemyHealthUpdate() { combatEnemyHealth.innerHTML = "<span style='background-color: pink'>" + enemyHealth + " Health"; }
+
+
+
 function attackloop() {
 
   if (waiting == false) {
@@ -181,6 +203,7 @@ function attackloop() {
   attackAnimPlayer();
  //console.log(`Player attacked! ${attackDamage} damage! Enemy health: ${enemyHealth}`);
 logbox(`Player attacked! ${attackDamage} damage! Enemy health: ${enemyHealth}`);
+combatEnemyHealthUpdate();
   if (enemyHealth <= 0) {
     console.log('Enemy defeated!'); logbox("Enemy is now dead. Congrats!"); enemy1.classList.add('enemydead');
 tempGold = Math.floor(Math.random() * 20) + 10;
@@ -201,6 +224,7 @@ return;
 function enemyTurn() {
     const counterAttackDamage = Math.floor(Math.random() * 10) + 1;
     playerHealth -= counterAttackDamage;
+    combatPlayerHealthUpdate();
     enemy1.classList.add('enemyattacking');
     audioSwoosh();
    // console.log(`Enemy counter attack! ${counterAttackDamage} damage! Player health: ${playerHealth}`);

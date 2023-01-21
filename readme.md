@@ -1,4 +1,4 @@
-[Play the Prototype Now!](https://ffs.mattyjacks.com/fantasyfightersim/)
+# [Play the Prototype Now!](https://ffs.mattyjacks.com/fantasyfightersim/)
 
 # Fantasy Fighter Sim
 An interactive RPG experience, Fantasy Fighter Sim is going to be a portfolio piece for Matt Jackson.

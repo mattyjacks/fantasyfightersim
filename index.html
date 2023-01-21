@@ -5,15 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fantasy Fighter Sim</title>
-    <link rel="stylesheet" href="index-style.css">
+    <link rel="stylesheet" href="code/interface-style.css">
   </head>
   <body class="body" id="body">
-<h1 style="text-align:center;">Welcome to <span>Fantasy Fighter Sim</span>!!!</h1>
-<div class="iframe-interface"><iframe src="https://ffs.mattyjacks.com/fantasyfightersim/code/interface.html" style="height:600px;width:800px;" title="Iframe Example"></iframe></div>
-<div class="credits" width="400">
-    <p>View Code on <a href="https://github.com/mattyjacks/fantasyfightersim">Github</a></p>
-    <p>Created by Matty Jacks!</p>
-<p>Sounds from <a href="https://www.zapsplat.com/">ZapSplat.com</a></p>
-  </p></div>
 
-</body>
+    <div class="interface">
+      <div class="maingame" max-width="1000px">
+<div id="logbox" height="100px" style="overflow-y:scroll; background-color: lightskyblue; text-align: center; opacity: 0.7; max-height: 100px; box-shadow: inset 0px 5px 25px 7px rgba(0,0,0,0.75); max-width: 700px; margin:auto;"><h1 class="rainbowtext" style="text-align:center;">FANTASY FIGHTER SIM!</h1><h1>Game Log:</h1><br><h1>Welcome to the game!</h1></div>
+
+<!--- This is the start screen. --->
+
+<button id="startbutton" style="background-color:rgb(103, 255, 103); font-size:30px;" onclick="interfaceScreenStartGame()">Start Game</button><br>
+<!--- This is the town screen -->
+
+<div class="screen-town" style="display:none;">
+
+<h2>Town of Venture</h2>
+
+
+<button id="enterCombatButton" onclick="interfaceScreenCombatShow()">Fight Something</button><br><br>
+<button id="restButton" onclick="rest()">Rest at Inn</button> <strong>10 Gold</strong>
+
+<p>Market Button goes here</p>
+<p>Tavern Button goes here</p>
+
+<p>Temple Button goes here</p>
+
+
+</div class="screen-town">
+
+<!--- This is the combat screen.-->
+<div class="screen-combat" style="display: none;">
+
+<table width="100%">
+  <tr>
+<td>
+  <button id="attack-button" onclick="attackloop()" style="background:red; font-size:large; margin: 10px;">Attack ⚔️</button><br>
+  <button id="rolld20button" onclick="rollD20free()">Roll a D20 🎲</button><br>
+  <button id="run-away-button" onclick="runAway()" style="background:yellow; font-size:large; margin: 10px;">Run Away 🏃‍♂️</button>
+  <br><br>
+</td>
+<td></td>
+</tr>
+<!--- <button id="logtestbutton" onclick="logtest()">Log Test</button> --->
+
+<table width="100%">
+  <tr>
+    <td><div id="player1" class="player shake"><p style="text-align:center; color:blue;"><span style="background-color: rgb(0, 225, 255);">Player</span></p>
+      <div style="text-align:center; color:blue;" id="combatPlayerHealth"></div>
+      <img src="https://github.com/mattyjacks/fantasyfightersim/raw/main/examples/images/00004-711545305-knight%20wearing___.png" alt="knight" height="300px";/> </div></td>
+    <td><div id="enemy1" class="enemy" style=""><p style="text-align: center; color: red;"><span style="background-color: pink;">Goblin</span></p>
+      <div style="text-align:center; color:red;" id="combatEnemyHealth"></div>
+      <img src="https://raw.githubusercontent.com/mattyjacks/fantasyfightersim/main/examples/images/00001-1546343001-goblin%20with%20s___.png" alt="goblin" height="200px";/></div>
+    </td>
+  </tr>
+</table>
+</div class="screen-combat">
+
+<button id="testsoundbutton" onclick="audioTest()">Test a Sound</button><br>
+<button id="soundmuteFXbutton" onclick="audioMuteFX()">Mute Sound Effects</button><br>
+<!--- <button id="soundmutemusicbutton" onclick="audioMuteMusic()">Mute Music</button><br> -->
+<!--- <button id="GFG" onclick = "Geeks()">
+  Click to add new buttons.
+</button> --->
+<button id="playerNameFormButton" onclick="myForm()">Change Player Name</button>
+<button id="enterCombatButton" onclick="interfaceScreenCombatShow()">Enter Combat</button>
+<button id="enterTownButton" onclick="interfaceScreenTownShow()">Enter Town</button>
+<button id="audioTestYawn" onclick="audioYawn()">Yawn</button>
+<button id="audioTestCoins" onclick="audioCoins()">Coins</button>
+
+
+
+</div>
+      </div>
+
+
+
+
+    </div>
+    <div class="credits" width="400">
+      <p>View Code on <a href="https://github.com/mattyjacks/fantasyfightersim">Github</a></p>
+      <p>Created by Matty Jacks!</p>
+<p>Sounds from <a href="https://www.zapsplat.com/">ZapSplat.com</a></p>
+    </p></div>
+    <!-- ... existing HTML ... -->
+
+    <p>
+      These are testing scraps related to react.
+      <!-- We will put our React component inside this div. -->
+      <div class="like_button_container" data-commentid="1"></div>
+    </p>
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- Load our React component. -->
+    <!-- <script src="like_button.js"></script> -->
+<!-- ... existing HTML ... -->
+  </body>
+  <script src="code/interface.js"></script>
+   <!-- ... other HTML ... -->
+
+</html>

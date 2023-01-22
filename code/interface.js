@@ -60,8 +60,8 @@ function cookiesReadCookies() {
   for(var i=0; i<cookiearray.length; i++) {
      valueKeyName = cookiearray[i].split('=')[0];
      value = cookiearray[i].split('=')[1];
-     console.log("Key is : " + valueKeyName + " and Value is : " + value);
-     logbox("Key is : " + valueKeyName + " and Value is : " + value);
+     console.log("Key is : " + valueKeyName + "     Value is : " + value);
+     logbox("Key is : " + valueKeyName + "    Value is : " + decodeURIComponent(value));
   } }
 
 

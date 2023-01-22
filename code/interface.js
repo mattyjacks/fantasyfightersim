@@ -24,6 +24,9 @@ var interfaceScreenTown = document.getElementsByClassName("screen-town");
 var combatPlayerHealth = document.getElementById("combatPlayerHealth");
 var combatEnemyHealth = document.getElementById("combatEnemyHealth");
 
+function reloadPage() {
+  location.reload(true);
+}
 
 function interfaceScreenStartGame() {
   logbox ('Welcome to Fantasy Fighter Sim! It is day ' + day + ' of your adventure! You have ' + playerGold + ' gold. You have ' + playerHealth + ' health.');

@@ -5,6 +5,8 @@ let enemyHealth = enemyMaxHealth;
 let startingGold = 25;
 let playerGold = startingGold;
 
+let playerName = 'Player';
+
 let waiting = false;
 let day = 1;
 
@@ -27,6 +29,43 @@ var combatEnemyHealth = document.getElementById("combatEnemyHealth");
 function reloadPage() {
   location.reload(true);
 }
+
+
+
+
+//https://www.tutorialspoint.com/javascript/javascript_cookies.htm
+
+function WriteCookiePlayerName() {
+  if( document.nameForm.playerNameName.value == "" ) {
+     alert("Enter a character name!");
+     return;
+  }
+  playerName = document.nameForm.playerNameName.value;
+  logbox('Your new name is ' + playerName + '!');
+  //use encodeURIComponent rather than escape() because escape() is deprecated
+  //we have to use encodeURIComponent to make sure that the cookie value is not corrupted, if it contains special characters like "$"
+  cookievalue = encodeURIComponent(document.nameForm.playerNameName.value) + ";";
+  document.cookie = "playerName=" + cookievalue;
+  console.log("Setting Cookies : " + "playerName=" + cookievalue );
+}
+
+function cookiesReadCookies() {
+  var allcookies = document.cookie;
+  logbox("All Cookies : " + allcookies );
+  
+  // Get all the cookies pairs in an array
+  cookiearray = allcookies.split(';');
+  
+  // Now take key value pair out of this array
+  for(var i=0; i<cookiearray.length; i++) {
+     valueKeyName = cookiearray[i].split('=')[0];
+     value = cookiearray[i].split('=')[1];
+     console.log("Key is : " + valueKeyName + " and Value is : " + value);
+     logbox("Key is : " + valueKeyName + " and Value is : " + value);
+  } }
+
+
+
 
 function interfaceScreenStartGame() {
   logbox ('Welcome to Fantasy Fighter Sim! It is day ' + day + ' of your adventure! You have ' + playerGold + ' gold. You have ' + playerHealth + ' health.');
@@ -52,9 +91,12 @@ function startCombat() {
 combatEnemyHealthUpdate();
 combatPlayerHealthUpdate();
 
-if (enemyHealth <= 0) {  // does not work yet
+if (enemyHealth < 1) {  // does not work yet
   enemyHealth = enemyMaxHealth;
   logbox('You have found a new enemy!')
+  enemy1.classList.remove('enemyattacking');
+  enemy1.classList.remove('enemydead');
+  combatEnemyHealthUpdate();
 } }
 
 function interfaceScreenTownShow() {

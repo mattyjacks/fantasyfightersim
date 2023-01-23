@@ -27,7 +27,7 @@ if (Cookies.get('playerName') == undefined) {
   */
 //let playerName = Cookies.get('playerName');
 
-cookiesWriteCookies();
+//cookiesWriteCookies();
 let combatPlayerName = document.getElementById("combatPlayerName");
 combatPlayerName.innerHTML = playerName;
 let topbarPlayerName = document.getElementById("topbarPlayerName");

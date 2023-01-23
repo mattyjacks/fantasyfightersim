@@ -78,6 +78,7 @@ function cookiesJSCookies() {
 var cookieGetter = Cookies.get();
 logbox(cookieGetter.toString());
 console.log(cookieGetter);
+logbox(JSON.stringify(cookieGetter));
 }
 
 

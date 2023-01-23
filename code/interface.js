@@ -5,7 +5,7 @@ let enemyHealth = enemyMaxHealth;
 let startingGold = 25;
 let playerGold = startingGold;
 
-if (Cookies.get('playerName') == undefined) {
+if (Cookies.get('playerName') === undefined) {
   let playerName = 'Player';
 } else {
 let playerName = Cookies.get('playerName'); }

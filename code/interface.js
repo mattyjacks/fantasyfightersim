@@ -6,6 +6,7 @@ let startingGold = 25;
 let playerGold = startingGold;
 
 let playerName = Cookies.get('playerName');
+console.log('Player name is: ' + playerName);
 if (Cookies.get('playerName') == undefined) { // This does not work yet, it always returns undefined
   playerName = 'Player';
   console.log('Player name is undefined, setting to default: ' + playerName);

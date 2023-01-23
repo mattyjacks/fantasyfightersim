@@ -20,7 +20,7 @@ if (Cookies.get('playerName') == undefined) {
   playerName = Cookies.get('playerName'); };
   */
 cookiesWriteCookies();
-playerName = Cookies.get('playerName');
+let playerName = Cookies.get('playerName');
 let combatPlayerName = document.getElementById("combatPlayerName");
 combatPlayerName.innerHTML = playerName;
 let topbarPlayerName = document.getElementById("topbarPlayerName");
@@ -79,6 +79,12 @@ function WriteCookiePlayerName() {
 }
 
 function cookiesWriteCookies() {
+  if (Cookies.get('playerName') == undefined) {
+    let playerName='Player';
+    console.log('Player name is undefined, setting to default: ' + playerName);
+    } else {
+    let playerName = Cookies.get('playerName');
+    };
 //var now = new Date();
 //now.setMonth(now.getMonth() + 1200);
   cookievalue = encodeURIComponent(document.nameForm.playerNameName.value) + ";";

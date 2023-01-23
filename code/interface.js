@@ -56,6 +56,7 @@ now.setMonth(now.getMonth() + 1200);
   document.cookie = "playerName=" + cookievalue;
   document.cookie = "expires=" + now.toUTCString() + ";";
   console.log("Setting Cookies : " + "playerName=" + cookievalue );
+  Cookies.set('playerNameJS', playerName, { expires: 1200 });
 }
 
 function cookiesReadCookies() {
@@ -69,8 +70,8 @@ function cookiesReadCookies() {
   for(var i=0; i<cookiearray.length; i++) {
      valueKeyName = cookiearray[i].split('=')[0];
      value = cookiearray[i].split('=')[1];
-     console.log("Key is : " + valueKeyName + "     Value is : " + decodeURIComponent(value));
-     logbox("Key is : " + valueKeyName + "  " + "  " + "    Value is : " + decodeURIComponent(value));
+     console.log("Key: " + valueKeyName + "     Value: " + decodeURIComponent(value));
+     logbox("Key: " + valueKeyName + "  " + "  " + "    Value: " + decodeURIComponent(value));
   } }
 
 

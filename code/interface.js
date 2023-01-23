@@ -8,6 +8,7 @@ let playerGold = startingGold;
 let playerName = Cookies.get('playerName');
 if (playerName == "undefined") {
   playerName = 'Player';
+  console.log('Player name is undefined, setting to default: ' + playerName);
 } else {
 let playerName = Cookies.get('playerName'); };
 

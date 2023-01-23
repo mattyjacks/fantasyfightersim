@@ -78,6 +78,7 @@ function WriteCookiePlayerName() {
   //use encodeURIComponent rather than escape() because escape() is deprecated
   //we have to use encodeURIComponent to make sure that the cookie value is not corrupted, if it contains special characters like "$"
  cookiesWriteCookies();
+ console.log ('Player name after cookiesWriteCookies is: ' + playerName)
  interfaceHideNameForm();
 }
 

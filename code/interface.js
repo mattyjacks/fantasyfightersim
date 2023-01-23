@@ -17,6 +17,7 @@ const soundMuteMusicbutton = document.getElementById("soundmutemusicbutton");
 let player1 = document.getElementById("player1");
 let enemy1 = document.getElementById("enemy1");
 const attackButton = document.getElementById('attack-button');
+const runButton = document.getElementById('run-away-button');
 const audioFileDiceRoll = 'https://github.com/mattyjacks/fantasyfightersim/blob/main/assets/sounds/zapsplat_leisure_board_game_yahtzee_dice_x1_put_in_shaker.mp3?raw=true';
 const audioFileRunAway = 'https://github.com/mattyjacks/fantasyfightersim/blob/main/assets/sounds/zapsplat_running_animals_cat_run_carpet_002_56479.mp3?raw=true';
 
@@ -119,6 +120,7 @@ function startCombat() {
 combatEnemyHealthUpdate();
 combatPlayerHealthUpdate();
 combatPlayerName.innerHTML = playerName;
+run-away-button.innerHTML = "Run Away 🏃‍♂️";
 
 if (enemyHealth < 1) {  // does not work yet
   enemyHealth = enemyMaxHealth;
@@ -280,6 +282,7 @@ logbox(`Player attacked! ${attackDamage} damage! Enemy health: ${enemyHealth}`);
 combatEnemyHealthUpdate();
   if (enemyHealth <= 0) {
     console.log('Enemy defeated!'); logbox("Enemy is now dead. Congrats!"); enemy1.classList.add('enemydead');
+    run-away-button.innerHTML = "Leave 🏃‍♂️";
 tempGold = Math.floor(Math.random() * 20) + 10;
 audioCoins();
 playerGold += tempGold;

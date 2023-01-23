@@ -80,10 +80,10 @@ function WriteCookiePlayerName() {
 
 function cookiesWriteCookies() {
   if (Cookies.get('playerName') == undefined) {
-    let playerName='Player';
-    console.log('Player name is undefined, setting to default: ' + playerName);
+    playerName='Player';
+    console.log('Player name is undefined 2, setting to default: ' + playerName);
     } else {
-    let playerName = Cookies.get('playerName');
+    playerName = Cookies.get('playerName');
     console.log('Player name is: ' + playerName)
     };
 //var now = new Date();
@@ -91,7 +91,7 @@ function cookiesWriteCookies() {
   cookievalue = encodeURIComponent(document.nameForm.playerNameName.value) + ";";
   //document.cookie = "playerName=" + cookievalue;
   //document.cookie = "expires=" + now.toUTCString() + ";";
-  console.log("Setting Cookies : " + "playerName=" + cookievalue );
+  console.log("Setting Cookies : " + "playerName=" + playerName);
   Cookies.set('playerName', playerName, { expires: 1200 });
   console.log("Setting Cookies for playerGold, playerHealth, enemyHealth, day")
   Cookies.set('playerGold', playerGold, { expires: 1200 });

@@ -512,3 +512,6 @@ function audioMuteMusic() {
 
   console.log('Logging is working!');
     // Print a log message to the console
+
+
+    updateStats();

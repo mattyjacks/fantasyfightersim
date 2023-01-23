@@ -69,7 +69,7 @@ function updateStats() {
   if (topbarPlayerName.innerHTML === "undefined") {
     playerName = 'Player';
 console.log('Player name is undefined, setting to player: ' + playerName);
-
+topbarPlayerName.innerHTML = playerName;
   };
   console.log('Updating stats (playerHealth, playerGold, day)');
   topbarHealth.innerHTML = playerHealth + "/" + playerMaxHealth + " HP";

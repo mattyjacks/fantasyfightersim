@@ -21,7 +21,10 @@
 <div id="logbox" height="100px" style="overflow-y:scroll; background-color: lightskyblue; text-align: center; opacity: 0.7; max-height: 100px; box-shadow: inset 0px 5px 25px 7px rgba(0,0,0,0.75); max-width: 800px; margin:auto;"><h1 class="rainbowtext" style="text-align:center;">FANTASY FIGHTER SIM!</h1><h1>Game Log:</h1><br><h1>Welcome to the game!</h1></div>
 
 <!--- This is the start screen. --->
-
+<form name = "nameForm" action = "">
+  Enter name: <input type = "text" name = "playerNameName"/>
+  <input type = "button" value = "Set Name" onclick = "WriteCookiePlayerName();"/>
+</form>
 <button id="startbutton" style="background-color:rgb(103, 255, 103); font-size:30px;" onclick="interfaceScreenStartGame()">Start Game</button><br>
 <!--- This is the town screen -->
 

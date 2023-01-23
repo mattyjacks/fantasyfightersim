@@ -11,6 +11,7 @@ if (playerName === "undefined") {
 let playerName = Cookies.get('playerName'); }
 
 playerName = Cookies.get('playerName');
+combatPlayerName.innerHTML = playerName;
 
 
 let waiting = false;

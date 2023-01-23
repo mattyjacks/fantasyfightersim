@@ -120,7 +120,7 @@ function startCombat() {
 combatEnemyHealthUpdate();
 combatPlayerHealthUpdate();
 combatPlayerName.innerHTML = playerName;
-run-away-button.innerHTML == "Run Away 🏃‍♂️";
+runButton.innerHTML == "Run Away 🏃‍♂️";
 
 if (enemyHealth < 1) {  // does not work yet
   enemyHealth = enemyMaxHealth;
@@ -282,7 +282,7 @@ logbox(`Player attacked! ${attackDamage} damage! Enemy health: ${enemyHealth}`);
 combatEnemyHealthUpdate();
   if (enemyHealth <= 0) {
     console.log('Enemy defeated!'); logbox("Enemy is now dead. Congrats!"); enemy1.classList.add('enemydead');
-    run-away-button.innerHTML == "Leave 🏃‍♂️";
+    runButton.innerHTML = "Leave 🏃‍♂️";
 tempGold = Math.floor(Math.random() * 20) + 10;
 audioCoins();
 playerGold += tempGold;

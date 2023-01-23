@@ -65,6 +65,12 @@ function interfaceHideNameForm() {
   nameFormElement.style.display = "none";
 }
 
+function updateStats() {
+  console.log('Updating stats (playerHealth, playerGold, day)
+  topbarHealth.innerHTML = playerHealth;
+  topbarGold.innerHTML = playerGold;
+  topbarDay.innerHTML = day;
+}
 //https://www.tutorialspoint.com/javascript/javascript_cookies.htm
 
 function WriteCookiePlayerName() {
@@ -170,7 +176,7 @@ combatPlayerHealthUpdate();
 combatPlayerName.innerHTML = playerName;
 runButton.innerHTML == "Run Away 🏃‍♂️";
 
-if (enemyHealth < 1) {  // does not work yet
+if (enemyHealth < 1) {  // works
   enemyHealth = enemyMaxHealth;
   combatPlayerName.innerHTML = playerName;
   logbox('You have found a new enemy!')
@@ -178,6 +184,7 @@ if (enemyHealth < 1) {  // does not work yet
   enemy1.classList.remove('enemyattacking');
   enemy1.classList.remove('enemydead');
   combatEnemyHealthUpdate();
+  updateStats();
 } }
 
 function interfaceScreenTownShow() {
@@ -330,6 +337,7 @@ function attackloop() {
  //console.log(`Player attacked! ${attackDamage} damage! Enemy health: ${enemyHealth}`);
 logbox(`Player attacked! ${attackDamage} damage! Enemy health: ${enemyHealth}`);
 combatEnemyHealthUpdate();
+updateStats();
   if (enemyHealth <= 0) {
     console.log('Enemy defeated!'); logbox("Enemy is now dead. Congrats!"); enemy1.classList.add('enemydead');
     runButton.innerHTML = "Leave 🏃‍♂️";
@@ -337,6 +345,7 @@ tempGold = Math.floor(Math.random() * 20) + 10;
 audioCoins();
 playerGold += tempGold;
 logbox(`You found ${tempGold} gold! Total gold: ${playerGold}`);
+updateStats();
 cookiesWriteCookies();
 waiting = false;
 return;
@@ -353,6 +362,7 @@ function enemyTurn() {
     const counterAttackDamage = Math.floor(Math.random() * 10) + 1;
     playerHealth -= counterAttackDamage;
     combatPlayerHealthUpdate();
+    updateStats();
     enemy1.classList.add('enemyattacking');
     audioSwoosh();
    // console.log(`Enemy counter attack! ${counterAttackDamage} damage! Player health: ${playerHealth}`);
@@ -364,6 +374,7 @@ logbox(`Enemy counter attacked! ${counterAttackDamage} damage! Player health: ${
     if (playerHealth <= 0) {
       console.log('Game over');
       logbox('Game over! You died!');
+      updateStats();
     }
 //set waiting to false so that the player can attack again
     waiting = false;

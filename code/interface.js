@@ -59,7 +59,7 @@ var now = new Date();
 now.setMonth(now.getMonth() + 1200);
 
 
-//  cookievalue = encodeURIComponent(document.nameForm.playerNameName.value) + ";";
+  cookievalue = encodeURIComponent(document.nameForm.playerNameName.value) + ";";
   //document.cookie = "playerName=" + cookievalue;
   //document.cookie = "expires=" + now.toUTCString() + ";";
   console.log("Setting Cookies : " + "playerName=" + cookievalue );

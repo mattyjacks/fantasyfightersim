@@ -10,7 +10,7 @@ if (playerName == "undefined") {
   playerName = 'Player';
   console.log('Player name is undefined, setting to default: ' + playerName);
 } else {
-let playerName = Cookies.get('playerName'); };
+ playerName = Cookies.get('playerName'); };
 
 playerName = Cookies.get('playerName');
 let combatPlayerName = document.getElementById("combatPlayerName");

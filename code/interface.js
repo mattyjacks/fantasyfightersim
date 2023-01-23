@@ -82,7 +82,13 @@ logbox(JSON.stringify(cookieGetter));
 }
 
 function cookiesJSClearCookies() {
-  for (var it in $.cookie()) $.removeCookie(it);
+  Object.keys(Cookies.get()).forEach(function(cookieName) {
+    var neededAttributes = {
+      // Here you pass the same attributes that were used when the cookie was created
+      // and are required when removing the cookie
+    };
+    Cookies.remove(cookieName, neededAttributes);
+  });
 //Cookies.remove();
 logbox('Cookies cleared, save data deleted.');
 }

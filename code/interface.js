@@ -6,8 +6,8 @@ let startingGold = 25;
 let playerGold = startingGold;
 
 let playerName = Cookies.get('playerName');
-if (playerName === "undefined") {
-  let playerName = 'Player';
+if (playerName == "undefined") {
+  playerName = 'Player';
 } else {
 let playerName = Cookies.get('playerName'); };
 

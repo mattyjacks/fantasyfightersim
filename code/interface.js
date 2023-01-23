@@ -77,6 +77,7 @@ function cookiesReadCookies() {
 function cookiesJSCookies() {
 var cookieGetter = Cookies.get();
 logbox(cookieGetter);
+console.log(cookieGetter);
 }
 
 

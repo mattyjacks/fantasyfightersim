@@ -13,6 +13,7 @@ console.log('Player name is undefined, setting to default: ' + playerName);
 //cookiesWriteCookies();
 } else {
 let playerName = Cookies.get('playerName');
+console.log('Updated Player name is: ' + playerName)
 };
 
 let playerName = Cookies.get('playerName');

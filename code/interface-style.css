@@ -3,14 +3,14 @@
 
 
 
-#logbox h1 span {background-color: black; color: white;}
+#logbox h1 span {background-color: black !important; color: white !important;}
 
-#logbox h1 {padding: 3px; margin:0px;}
+#logbox h1 {padding: 3px; margin:0px !important;}
 
-#logbox {overflow-y:scroll; background-color: lightskyblue;
-   text-align: center; opacity: 0.7; max-height: 150px; 
-   box-shadow: inset 0px 5px 25px 7px rgba(0,0,0,0.75); max-width: 800px; 
-   margin:auto; border: 5px solid rgb(138, 199, 255);}
+#logbox {overflow-y:scroll !important; background-color: lightskyblue;
+   text-align: center !important; opacity: 0.7 !important; max-height: 150px!important; 
+   box-shadow: inset 0px 5px 25px 7px rgba(0,0,0,0.75) !important; max-width: 800px !important; 
+   margin:auto !important; border: 5px solid rgb(138, 199, 255)!important;}
 
 body {background: linear-gradient(to bottom, rgba(242,246,248,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 51%, rgba(224,239,249,1) 100%);}
 

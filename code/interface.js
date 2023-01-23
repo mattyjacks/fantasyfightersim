@@ -74,6 +74,9 @@ function cookiesReadCookies() {
      logbox("Key: " + valueKeyName + "  " + "  " + "    Value: " + decodeURIComponent(value));
   } }
 
+function cookiesJSCookies() {
+logbox(Cookies.get());
+}
 
 
 

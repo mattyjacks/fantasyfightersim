@@ -53,10 +53,10 @@ now.setMonth(now.getMonth() + 1200);
 
 
   cookievalue = encodeURIComponent(document.nameForm.playerNameName.value) + ";";
-  document.cookie = "playerName=" + cookievalue;
-  document.cookie = "expires=" + now.toUTCString() + ";";
+  //document.cookie = "playerName=" + cookievalue;
+  //document.cookie = "expires=" + now.toUTCString() + ";";
   console.log("Setting Cookies : " + "playerName=" + cookievalue );
-  Cookies.set('playerName2', playerName, { expires: 1200 });
+  Cookies.set('playerName', playerName, { expires: 1200 });
 }
 
 function cookiesReadCookies() {

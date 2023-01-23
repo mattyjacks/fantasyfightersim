@@ -5,12 +5,14 @@ let enemyHealth = enemyMaxHealth;
 let startingGold = 25;
 let playerGold = startingGold;
 
+let playerName = Cookies.get('playerName');
 if (playerName === "undefined") {
   let playerName = 'Player';
 } else {
 let playerName = Cookies.get('playerName'); }
 
 playerName = Cookies.get('playerName');
+let combatPlayerName = document.getElementById("combatPlayerName");
 combatPlayerName.innerHTML = playerName;
 
 
@@ -37,8 +39,6 @@ var combatEnemyHealth = document.getElementById("combatEnemyHealth");
 function reloadPage() {
   location.reload(true);
 }
-
-let combatPlayerName = document.getElementById("combatPlayerName");
 
 
 //https://www.tutorialspoint.com/javascript/javascript_cookies.htm

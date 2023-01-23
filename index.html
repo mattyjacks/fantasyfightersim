@@ -48,7 +48,6 @@
   <tr>
 <td>
   <button id="attack-button" onclick="attackloop()" style="background:red; font-size:large; margin: 10px;">Attack ⚔️</button><br>
-  <button id="rolld20button" onclick="rollD20free()">Roll a D20 🎲</button><br>
   <button id="run-away-button" onclick="runAway()" style="background:yellow; font-size:large; margin: 10px;">Run Away 🏃‍♂️</button>
   <br><br>
 </td>
@@ -67,29 +66,13 @@
     </td>
   </tr>
 </table>
-</div class="screen-combat">
+</div> <!-- screen-combat -->
 
 <button id="soundmuteFXbutton" onclick="audioMuteFX()">Mute Sound Effects</button><br>
 <!--- <button id="soundmutemusicbutton" onclick="audioMuteMusic()">Mute Music</button><br> -->
 <!--- <button id="GFG" onclick = "Geeks()">
   Click to add new buttons.
 </button> --->
-<div class="debug-menu">
-<p>Debugging Menu</p>
-<button id="testsoundbutton" onclick="audioTest()">Test a Sound</button><br>
-<button id="playerNameFormButton" onclick="myForm()">Change Player Name</button>
-<button id="enterCombatButton" onclick="interfaceScreenCombatShow()">Enter Combat</button>
-<button id="enterTownButton" onclick="interfaceScreenTownShow()">Enter Town</button>
-<button id="audioTestYawn" onclick="audioYawn()">Test Yawns</button>
-<button id="audioTestCoins" onclick="audioCoins()">Test Coins</button>
-<button id="reloadPageButton" onclick="reloadPage()">Reload Page</button>
-<form name = "nameForm" action = "">
-  Enter name: <input type = "text" name = "playerNameName"/>
-  <input type = "button" value = "Set Name" onclick = "WriteCookiePlayerName();"/>
-</form>
-<button id="cookieTestButton" onclick="cookiesReadCookies()">Read Save File</button>
-<button id="cookieJSCookiebutton" onclick="cookiesJSCookies()">Read JS Cookies Save File 2</button>
-</div>
 
 
 
@@ -99,7 +82,28 @@
 
 
 
-    </div>
+    </div > <!-- maingame -->
+
+
+    <div class="debug-menu">
+      <p>Debugging Menu</p>
+      <button id="rolld20button" onclick="rollD20free()">Roll a D20 🎲</button><br>
+      <button id="testsoundbutton" onclick="audioTest()">Test a Sound</button><br>
+      <button id="playerNameFormButton" onclick="myForm()">Change Player Name</button>
+      <button id="enterCombatButton" onclick="interfaceScreenCombatShow()">Enter Combat</button>
+      <button id="enterTownButton" onclick="interfaceScreenTownShow()">Enter Town</button>
+      <button id="audioTestYawn" onclick="audioYawn()">Test Yawns</button>
+      <button id="audioTestCoins" onclick="audioCoins()">Test Coins</button>
+      <button id="reloadPageButton" onclick="reloadPage()">Reload Page</button>
+      <form name = "nameForm" action = "">
+        Enter name: <input type = "text" name = "playerNameName"/>
+        <input type = "button" value = "Set Name" onclick = "WriteCookiePlayerName();"/>
+      </form>
+      <button id="cookieTestButton" onclick="cookiesReadCookies()">Read Save File - Method 1</button>
+      <button id="cookieJSCookiebutton" onclick="cookiesJSCookies()">Read Save File - Method 2</button>
+      <button id="cookieDeleteButton" onclick="cookiesJSClearCookies()">Delete Save File</button>
+      </div>
+
     <div class="credits" width="400">
       <p>View Code on <a href="https://github.com/mattyjacks/fantasyfightersim">Github</a></p>
       <p>Created by Matty Jacks!</p>

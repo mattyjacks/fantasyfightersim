@@ -56,7 +56,7 @@ now.setMonth(now.getMonth() + 1200);
   document.cookie = "playerName=" + cookievalue;
   document.cookie = "expires=" + now.toUTCString() + ";";
   console.log("Setting Cookies : " + "playerName=" + cookievalue );
-  Cookies.set('playerNameJS', playerName, { expires: 1200 });
+  Cookies.set('playerName2', playerName, { expires: 1200 });
 }
 
 function cookiesReadCookies() {
@@ -76,9 +76,14 @@ function cookiesReadCookies() {
 
 function cookiesJSCookies() {
 var cookieGetter = Cookies.get();
-logbox(cookieGetter.toString());
+//logbox(cookieGetter.toString()); does not work properly, returns [object Object]
 console.log(cookieGetter);
 logbox(JSON.stringify(cookieGetter));
+}
+
+function cookiesJSClearCookies() {
+Cookies.remove();
+logbox('Cookies cleared, save data deleted.');
 }
 
 

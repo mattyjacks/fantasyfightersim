@@ -22,7 +22,7 @@ if (Cookies.get('playerName') == undefined) {
   playerName = Cookies.get('playerName'); };
   */
 cookiesWriteCookies();
-let playerName = Cookies.get('playerName');
+//let playerName = Cookies.get('playerName');
 let combatPlayerName = document.getElementById("combatPlayerName");
 combatPlayerName.innerHTML = playerName;
 let topbarPlayerName = document.getElementById("topbarPlayerName");

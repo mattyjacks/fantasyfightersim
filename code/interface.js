@@ -66,10 +66,15 @@ function interfaceHideNameForm() {
 }
 
 function updateStats() {
+  if (topbarPlayerName.innerHTML === undefined) {
+    playerName = 'Player';
+console.log('Player name is undefined, setting to player: ' + playerName);
+
+  };
   console.log('Updating stats (playerHealth, playerGold, day)');
-  topbarHealth.innerHTML = playerHealth;
-  topbarGold.innerHTML = playerGold;
-  topbarDay.innerHTML = day;
+  topbarHealth.innerHTML = playerHealth + "/" + playerMaxHealth + " HP";
+  topbarGold.innerHTML = playerGold + " Gold";
+  topbarDay.innerHTML = "Day "+ day;
 }
 //https://www.tutorialspoint.com/javascript/javascript_cookies.htm
 
@@ -292,6 +297,7 @@ return;
   audioCoins();
 
   day += 1;
+  updateStats();
   logbox('You rested and healed to full health! Remaining gold: ' + playerGold + '. It is now the morning of day ' + day + ' of your adventure.');
 cookiesWriteCookies();
   setTimeout(() => {console.log("Playing Yawn"); audioYawn();}, 500);

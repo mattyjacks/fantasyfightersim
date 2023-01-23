@@ -23,7 +23,7 @@
 <!--- This is the start screen. --->
 <form name = "nameForm" action = "">
   Enter name: <input type = "text" name = "playerNameName"/>
-  <input type = "button" value = "Set Name" onclick = "WriteCookiePlayerName();"/>
+  <input type = "button" value = "Set Name" onclick = "WriteCookiePlayerName()"/>
 </form>
 <button id="startbutton" style="background-color:rgb(103, 255, 103); font-size:30px;" onclick="interfaceScreenStartGame()">Start Game</button><br>
 <!--- This is the town screen -->
@@ -98,10 +98,10 @@
       <button id="audioTestYawn" onclick="audioYawn()">Test Yawns</button>
       <button id="audioTestCoins" onclick="audioCoins()">Test Coins</button>
       <button id="reloadPageButton" onclick="reloadPage()">Reload Page</button>
-      <form name = "nameForm" action = "">
+      <!-- <form name = "nameForm" action = "">
         Enter name: <input type = "text" name = "playerNameName"/>
         <input type = "button" value = "Set Name" onclick = "WriteCookiePlayerName();"/>
-      </form>
+      </form>  de-duplicated-->
       <button id="cookieTestButton" onclick="cookiesReadCookies()">Read Save File - Method 1</button>
       <button id="cookieJSCookiebutton" onclick="cookiesJSCookies()">Read Save File - Method 2</button>
       <button id="cookieDeleteButton" onclick="cookiesJSClearCookies()">Delete Save File</button>

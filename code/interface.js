@@ -8,11 +8,11 @@ let waiting = false;
 let day = 1;
 
 if (Cookies.get('playerName') == undefined) {
-playerName='Player';
+let playerName='Player';
 console.log('Player name is undefined, setting to default: ' + playerName);
 //cookiesWriteCookies();
 } else {
-playerName = Cookies.get('playerName');
+let playerName = Cookies.get('playerName');
 };
 
 let playerName = Cookies.get('playerName');

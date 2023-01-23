@@ -59,15 +59,18 @@ function WriteCookiePlayerName() {
 }
 
 function cookiesWriteCookies() {
-var now = new Date();
-now.setMonth(now.getMonth() + 1200);
-
-
+//var now = new Date();
+//now.setMonth(now.getMonth() + 1200);
   cookievalue = encodeURIComponent(document.nameForm.playerNameName.value) + ";";
   //document.cookie = "playerName=" + cookievalue;
   //document.cookie = "expires=" + now.toUTCString() + ";";
   console.log("Setting Cookies : " + "playerName=" + cookievalue );
   Cookies.set('playerName', playerName, { expires: 1200 });
+  console.log("Setting Cookies for playerGold, playerHealth, enemyHealth, day")
+  Cookies.set('playerGold', playerGold, { expires: 1200 });
+  Cookies.set('playerHealth', playerHealth, { expires: 1200 });
+  Cookies.set('enemyHealth', enemyHealth, { expires: 1200 });
+  Cookies.set('day', day, { expires: 1200 });
 }
 
 function cookiesReadCookies() {
@@ -91,6 +94,7 @@ var cookieGetter = Cookies.get();
 console.log(cookieGetter);
 logbox(JSON.stringify(cookieGetter));
 }
+
 
 function cookiesJSClearCookies() {
   Object.keys(Cookies.get()).forEach(function(cookieName) {
@@ -248,7 +252,7 @@ return;
 
   day += 1;
   logbox('You rested and healed to full health! Remaining gold: ' + playerGold + '. It is now the morning of day ' + day + ' of your adventure.');
-
+cookiesWriteCookies();
   setTimeout(() => {console.log("Playing Yawn"); audioYawn();}, 500);
   enemy1.classList.remove('enemyattacking');
   enemy1.classList.remove('enemydead');
@@ -270,8 +274,8 @@ function rollD20free() {
 
 
 
-function combatPlayerHealthUpdate() { combatPlayerHealth.innerHTML = "<span style='background-color: rgb(0, 225, 255);'>"+ playerHealth + " Health </span>"; }
-function combatEnemyHealthUpdate() { combatEnemyHealth.innerHTML = "<span style='background-color: pink'>" + enemyHealth + " Health"; }
+function combatPlayerHealthUpdate() {cookiesWriteCookies(); combatPlayerHealth.innerHTML = "<span style='background-color: rgb(0, 225, 255);'>"+ playerHealth + " Health </span>"; }
+function combatEnemyHealthUpdate() {cookiesWriteCookies(); combatEnemyHealth.innerHTML = "<span style='background-color: pink'>" + enemyHealth + " Health"; }
 
 
 
@@ -299,6 +303,7 @@ tempGold = Math.floor(Math.random() * 20) + 10;
 audioCoins();
 playerGold += tempGold;
 logbox(`You found ${tempGold} gold! Total gold: ${playerGold}`);
+cookiesWriteCookies();
 waiting = false;
 return;
 

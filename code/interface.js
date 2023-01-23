@@ -9,7 +9,7 @@ let playerName = Cookies.get('playerName');
 if (playerName === "undefined") {
   let playerName = 'Player';
 } else {
-let playerName = Cookies.get('playerName'); }
+let playerName = Cookies.get('playerName'); };
 
 playerName = Cookies.get('playerName');
 let combatPlayerName = document.getElementById("combatPlayerName");

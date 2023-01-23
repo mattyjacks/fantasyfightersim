@@ -30,7 +30,7 @@ function reloadPage() {
   location.reload(true);
 }
 
-
+let combatPlayerName = document.getElementById("combatPlayerName");
 
 
 //https://www.tutorialspoint.com/javascript/javascript_cookies.htm
@@ -44,8 +44,17 @@ function WriteCookiePlayerName() {
   logbox('Your new name is ' + playerName + '!');
   //use encodeURIComponent rather than escape() because escape() is deprecated
   //we have to use encodeURIComponent to make sure that the cookie value is not corrupted, if it contains special characters like "$"
+ cookiesWriteCookies();
+}
+
+function cookiesWriteCookies() {
+var now = new Date();
+now.setMonth(now.getMonth() + 1200);
+
+
   cookievalue = encodeURIComponent(document.nameForm.playerNameName.value) + ";";
   document.cookie = "playerName=" + cookievalue;
+  document.cookie = "expires=" + now.toUTCString() + ";";
   console.log("Setting Cookies : " + "playerName=" + cookievalue );
 }
 
@@ -61,7 +70,7 @@ function cookiesReadCookies() {
      valueKeyName = cookiearray[i].split('=')[0];
      value = cookiearray[i].split('=')[1];
      console.log("Key is : " + valueKeyName + "     Value is : " + decodeURIComponent(value));
-     logbox("Key is : " + valueKeyName + "    Value is : " + decodeURIComponent(value));
+     logbox("Key is : " + valueKeyName + "  " + "  " + "    Value is : " + decodeURIComponent(value));
   } }
 
 
@@ -90,6 +99,7 @@ function interfaceScreenCombatShow() {
 function startCombat() {
 combatEnemyHealthUpdate();
 combatPlayerHealthUpdate();
+combatPlayerName.innerHTML = playerName;
 
 if (enemyHealth < 1) {  // does not work yet
   enemyHealth = enemyMaxHealth;

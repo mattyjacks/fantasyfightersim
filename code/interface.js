@@ -66,7 +66,7 @@ function interfaceHideNameForm() {
 }
 
 function updateStats() {
-  if (topbarPlayerName.innerHTML === undefined) {
+  if (topbarPlayerName.innerHTML === "undefined") {
     playerName = 'Player';
 console.log('Player name is undefined, setting to player: ' + playerName);
 

@@ -75,7 +75,8 @@ function cookiesReadCookies() {
   } }
 
 function cookiesJSCookies() {
-logbox(Cookies.get());
+var cookieGetter = Cookies.get();
+logbox(cookieGetter);
 }
 
 

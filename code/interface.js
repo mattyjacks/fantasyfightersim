@@ -7,7 +7,7 @@ let playerGold = startingGold;
 
 let playerName = Cookies.get('playerName');
 console.log('Player name is: ' + playerName);
-if (Cookies.get('playerName') == undefined) { // This does not work yet, it always returns undefined
+if (typeof Cookies.get('playerName') === undefined) { // This does not work yet, it always returns undefined
   playerName = 'Player';
   console.log('Player name is undefined, setting to default: ' + playerName);
 } else {
@@ -16,6 +16,8 @@ if (Cookies.get('playerName') == undefined) { // This does not work yet, it alwa
 playerName = Cookies.get('playerName');
 let combatPlayerName = document.getElementById("combatPlayerName");
 combatPlayerName.innerHTML = playerName;
+let topbarPlayerName = document.getElementById("topbarPlayerName");
+topbarPlayerName.innerHTML = playerName;
 
 
 let waiting = false;
@@ -38,10 +40,20 @@ var interfaceScreenTown = document.getElementsByClassName("screen-town");
 var combatPlayerHealth = document.getElementById("combatPlayerHealth");
 var combatEnemyHealth = document.getElementById("combatEnemyHealth");
 
+var nameFormElement = document.getElementById("nameFormID");
+
 function reloadPage() {
   location.reload(true);
 }
 
+
+
+function interfaceShowNameForm() {
+  nameFormElement.style.display = "block";
+}
+function interfaceHideNameForm() {
+  nameFormElement.style.display = "none";
+}
 
 //https://www.tutorialspoint.com/javascript/javascript_cookies.htm
 
@@ -56,6 +68,7 @@ function WriteCookiePlayerName() {
   //use encodeURIComponent rather than escape() because escape() is deprecated
   //we have to use encodeURIComponent to make sure that the cookie value is not corrupted, if it contains special characters like "$"
  cookiesWriteCookies();
+ interfaceHideNameForm();
 }
 
 function cookiesWriteCookies() {

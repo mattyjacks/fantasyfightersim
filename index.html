@@ -18,15 +18,17 @@
 
     <div class="interface">
       <div class="maingame" max-width="1000px">
-<div id="logbox" height="100px" style="overflow-y:scroll; background-color: lightskyblue; text-align: center; opacity: 0.7; max-height: 100px; box-shadow: inset 0px 5px 25px 7px rgba(0,0,0,0.75); max-width: 800px; margin:auto;"><h1 class="rainbowtext" style="text-align:center;">FANTASY FIGHTER SIM!</h1><h1>Game Log:</h1><br><h1>Welcome to the game!</h1></div>
+  <div id="topbar" class="topbar" style="">
+<span id="topbarPlayerName">Player</span><button onclick="interfaceShowNameForm()">✏️</button><span id="topbarHealth">100 Health</span><span id="topbarGold">26 Gold</span><span id="topbarDay">Day 1</span>
+<form id="nameFormID" style="display:none;" name = "nameForm" action = "">
+  <input type = "text" name = "playerNameName" placeholder="Sir Knightmare"/>
+  <input type = "button" value = "Set Name" onclick = "WriteCookiePlayerName()"/>
+</form></div> <!-- topbar -->
+<div id="logbox" height="150px" style=""><h1 class="rainbowtext" style="text-align:center;">FANTASY FIGHTER SIM!</h1><h1>Game Log:</h1><br><h1>Welcome to the game!</h1></div>
 
 <!--- This is the start screen. 
   
   to-do: make name required to start, put name again in bottom area--->
-<form name = "nameForm" action = "">
-  Enter name: <input type = "text" name = "playerNameName" placeholder="Sir Knightmare"/>
-  <input type = "button" value = "Set Name" onclick = "WriteCookiePlayerName()"/>
-</form>
 <button id="startbutton" style="background-color:rgb(103, 255, 103); font-size:30px;" onclick="interfaceScreenStartGame()">Start Game</button><br>
 <!--- This is the town screen -->
 
@@ -35,8 +37,8 @@
 <h2>Town of Venture</h2>
 
 
-<button id="enterCombatButton" onclick="interfaceScreenCombatShow()">Fight Something</button><br><br>
-<button id="restButton" onclick="rest()">Rest at Inn</button> <strong>10 Gold</strong>
+<button id="enterCombatButton" onclick="interfaceScreenCombatShow()" style="background:red; font-size:large; margin: 5px;">Fight Something ⚔️</button><br><br>
+<button id="restButton" onclick="rest()" style="background:yellow; font-size:large; margin: 5px;">Rest at Inn 🛏️</button> <strong>10 Gold</strong>
 
 <p>Market Button goes here</p>
 <p>Tavern Button goes here</p>
@@ -93,13 +95,13 @@
     <div class="debug-menu">
       <p>Debugging Menu</p>
       <button id="rolld20button" onclick="rollD20free()">Roll a D20 🎲</button><br>
-      <button id="testsoundbutton" onclick="audioTest()">Test a Sound</button><br>
-      <button id="playerNameFormButton" onclick="myForm()">Change Player Name</button>
-      <button id="enterCombatButton" onclick="interfaceScreenCombatShow()">Enter Combat</button>
-      <button id="enterTownButton" onclick="interfaceScreenTownShow()">Enter Town</button>
+      <button id="reloadPageButton" onclick="reloadPage()">Reload Page</button>
+      <button id="testsoundbutton" onclick="audioTest()">Test Sound</button><br>
+     <!-- <button id="playerNameFormButton" onclick="myForm()">Change Player Name</button> -->
       <button id="audioTestYawn" onclick="audioYawn()">Test Yawns</button>
       <button id="audioTestCoins" onclick="audioCoins()">Test Coins</button>
-      <button id="reloadPageButton" onclick="reloadPage()">Reload Page</button>
+      <button id="enterCombatButton" onclick="interfaceScreenCombatShow()">Enter Combat</button>
+      <button id="enterTownButton" onclick="interfaceScreenTownShow()">Enter Town</button>
       <!-- <form name = "nameForm" action = "">
         Enter name: <input type = "text" name = "playerNameName"/>
         <input type = "button" value = "Set Name" onclick = "WriteCookiePlayerName();"/>

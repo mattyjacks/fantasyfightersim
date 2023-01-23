@@ -7,6 +7,11 @@
 
 #logbox h1 {padding: 3px; margin:0px;}
 
+#logbox {overflow-y:scroll; background-color: lightskyblue;
+   text-align: center; opacity: 0.7; max-height: 150px; 
+   box-shadow: inset 0px 5px 25px 7px rgba(0,0,0,0.75); max-width: 800px; 
+   margin:auto; border: 5px solid rgb(138, 199, 255);}
+
 body {background: linear-gradient(to bottom, rgba(242,246,248,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 51%, rgba(224,239,249,1) 100%);}
 
 .debug-menu {background-color: rgba(255, 255, 255, 0.479);}
@@ -18,6 +23,18 @@ body {background: linear-gradient(to bottom, rgba(242,246,248,1) 0%, rgba(216,22
 .credits {background:azure; float: right; border: lightblue dashed 5px; padding:10px;}
 
 .pressedbutton {color:white; background-color: grey;}
+
+
+.topbar span {padding: 5px 10px; border:white solid 1px; border-radius: 5px; margin: 5px; background-color: rgba(255, 255, 255, 0.589);}
+
+
+
+
+
+
+
+
+
 
 @keyframes shake {
     0% {

@@ -66,7 +66,7 @@ function interfaceHideNameForm() {
 }
 
 function updateStats() {
-  console.log('Updating stats (playerHealth, playerGold, day)
+  console.log('Updating stats (playerHealth, playerGold, day)');
   topbarHealth.innerHTML = playerHealth;
   topbarGold.innerHTML = playerGold;
   topbarDay.innerHTML = day;

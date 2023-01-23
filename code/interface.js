@@ -75,6 +75,7 @@ function WriteCookiePlayerName() {
   playerName = document.nameForm.playerNameName.value;
   logbox('Your new name is ' + playerName + '!');
   combatPlayerName.innerHTML = playerName;
+  Cookies.set('playerName', playerName, { expires: 1200 });
   //use encodeURIComponent rather than escape() because escape() is deprecated
   //we have to use encodeURIComponent to make sure that the cookie value is not corrupted, if it contains special characters like "$"
  cookiesWriteCookies();

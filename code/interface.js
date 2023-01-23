@@ -7,13 +7,13 @@ let playerGold = startingGold;
 let waiting = false;
 let day = 1;
 
-if (Cookies.get('playerName') == undefined) {
+if (Cookies.get('playerName') !== undefined){
+  let playerName = Cookies.get('playerName');
+  console.log('Updated Player name is: ' + playerName)
+  } else {
 let playerName='Player';
 console.log('Player name is undefined, setting to default: ' + playerName);
 //cookiesWriteCookies();
-} else {
-let playerName = Cookies.get('playerName');
-console.log('Updated Player name is: ' + playerName)
 };
 
 let playerName = Cookies.get('playerName');

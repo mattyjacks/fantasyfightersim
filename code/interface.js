@@ -5,7 +5,13 @@ let enemyHealth = enemyMaxHealth;
 let startingGold = 25;
 let playerGold = startingGold;
 
-let playerName = 'Player';
+if (Cookies.get('playerName') == undefined) {
+  let playerName = 'Player';
+} else {
+let playerName = Cookies.get('playerName'); }
+
+playerName = Cookies.get('playerName');
+
 
 let waiting = false;
 let day = 1;
@@ -53,7 +59,7 @@ var now = new Date();
 now.setMonth(now.getMonth() + 1200);
 
 
-  cookievalue = encodeURIComponent(document.nameForm.playerNameName.value) + ";";
+//  cookievalue = encodeURIComponent(document.nameForm.playerNameName.value) + ";";
   //document.cookie = "playerName=" + cookievalue;
   //document.cookie = "expires=" + now.toUTCString() + ";";
   console.log("Setting Cookies : " + "playerName=" + cookievalue );
@@ -124,7 +130,9 @@ runButton.innerHTML == "Run Away 🏃‍♂️";
 
 if (enemyHealth < 1) {  // does not work yet
   enemyHealth = enemyMaxHealth;
+  combatPlayerName.innerHTML = playerName;
   logbox('You have found a new enemy!')
+  runButton.innerHTML == "Run Away 🏃‍♂️";
   enemy1.classList.remove('enemyattacking');
   enemy1.classList.remove('enemydead');
   combatEnemyHealthUpdate();

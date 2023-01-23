@@ -84,6 +84,7 @@ function cookiesWriteCookies() {
     console.log('Player name is undefined, setting to default: ' + playerName);
     } else {
     let playerName = Cookies.get('playerName');
+    console.log('Player name is: ' + playerName)
     };
 //var now = new Date();
 //now.setMonth(now.getMonth() + 1200);

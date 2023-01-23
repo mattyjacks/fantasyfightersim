@@ -83,7 +83,7 @@ logbox(JSON.stringify(cookieGetter));
 
 function cookiesJSClearCookies() {
   for (var it in $.cookie()) $.removeCookie(it);
-Cookies.remove();
+//Cookies.remove();
 logbox('Cookies cleared, save data deleted.');
 }
 

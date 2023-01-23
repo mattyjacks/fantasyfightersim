@@ -5,7 +5,7 @@ let enemyHealth = enemyMaxHealth;
 let startingGold = 25;
 let playerGold = startingGold;
 
-if (Cookies.get('playerName') === "undefined") {
+if (playerName === "undefined") {
   let playerName = 'Player';
 } else {
 let playerName = Cookies.get('playerName'); }
@@ -49,6 +49,7 @@ function WriteCookiePlayerName() {
   }
   playerName = document.nameForm.playerNameName.value;
   logbox('Your new name is ' + playerName + '!');
+  combatPlayerName.innerHTML = playerName;
   //use encodeURIComponent rather than escape() because escape() is deprecated
   //we have to use encodeURIComponent to make sure that the cookie value is not corrupted, if it contains special characters like "$"
  cookiesWriteCookies();

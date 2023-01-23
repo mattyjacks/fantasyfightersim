@@ -4,6 +4,8 @@ let playerHealth = playerMaxHealth;
 let enemyHealth = enemyMaxHealth;
 let startingGold = 25;
 let playerGold = startingGold;
+let waiting = false;
+let day = 1;
 
 if (Cookies.get('playerName') == undefined) {
 let playerName='Player';
@@ -21,16 +23,13 @@ if (Cookies.get('playerName') == undefined) {
 } else {
   playerName = Cookies.get('playerName'); };
   */
-cookiesWriteCookies();
 //let playerName = Cookies.get('playerName');
+
+cookiesWriteCookies();
 let combatPlayerName = document.getElementById("combatPlayerName");
 combatPlayerName.innerHTML = playerName;
 let topbarPlayerName = document.getElementById("topbarPlayerName");
 topbarPlayerName.innerHTML = playerName;
-
-
-let waiting = false;
-let day = 1;
 
 let audioMuteFXbool = false;
 let audioMuteMusicbool = false;
